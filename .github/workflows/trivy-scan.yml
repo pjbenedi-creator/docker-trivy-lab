@@ -4,10 +4,12 @@ name: Análisis de Seguridad con Trivy
 # - push a la rama main
 # - pull requests
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
   pull_request:
-
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 jobs:
   trivy-scan:
     name: Escaneo de seguridad con Trivy
