@@ -18,6 +18,10 @@ jobs:
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
         # Descarga el código del repositorio para poder construir la imagen
 
       - name: Instalar Trivy (recomendado)
