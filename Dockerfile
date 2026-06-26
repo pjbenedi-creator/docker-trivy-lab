@@ -59,7 +59,7 @@ COPY index.html /var/www/html/index.html
 RUN uname -a > /etc/banner.txt
 
 EXPOSE 80
-
+ 
 USER appuser
 # === COMANDO DE INICIO ===
 # TODO: Reemplazar por un comando seguro
